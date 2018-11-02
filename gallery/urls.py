@@ -4,4 +4,5 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns=[
+    url(r'^$',views.photos_of_day,name='photosToday'),
 ]
