@@ -12,22 +12,22 @@ def photos_of_day(request):
     photos = Image.todays_photos()
     return render(request,'all-photos/today-photos.html',{"date": date,"photos":photos})
     
-# def past_days_photos(request, past_date):
+def past_days_photos(request, past_date):
 
-#    try:
-#        # Converts data from the string Url
-#        date = dt.datetime.strptime(past_date, '%Y-%m-%d').date()
+   try:
+       # Converts data from the string Url
+       date = dt.datetime.strptime(past_date, '%Y-%m-%d').date()
 
-#    except ValueError:
-#        # Raise 404 error when ValueError is thrown
-#        raise Http404()
-#        assert False
+   except ValueError:
+       # Raise 404 error when ValueError is thrown
+       raise Http404()
+       assert False
 
-#    if date == dt.date.today():
-#        return redirect(photos_of_day)
+   if date == dt.date.today():
+       return redirect(photos_of_day)
 
-#    photos = Image.days_photos(date)
-#    return render(request, 'all-photos/past-photos.html', {"date": date,"photos":photos})
+   photos = Image.days_photos(date)
+   return render(request, 'all-photos/past-photos.html', {"date": date,"photos":photos})
 
 # def search_results(request):
 
