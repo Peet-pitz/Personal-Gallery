@@ -30,11 +30,11 @@ class Category(models.Model):
 
     verbose_name_plural = "Categories"
 
-# class Location(models.Model):
-#     name = models.CharField(max_length = 30)
+class Location(models.Model):
+    name = models.CharField(max_length = 30)
 
-#     def __str__(self):
-#         return self.name
+    def __str__(self):
+        return self.name
 
 
 # class Image(models.Model):
