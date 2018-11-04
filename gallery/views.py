@@ -1,16 +1,16 @@
-# from django.shortcuts import render,redirect
-# import datetime as dt
-# from django.http import HttpResponse,Http404
-# from .models import Image
+from django.shortcuts import render,redirect
+import datetime as dt
+from django.http import HttpResponse,Http404
+from .models import Image
 
 
-# # Create your views here.
+# Create your views here.
 
 
-# def photos_of_day(request):
-#     date = dt.date.today()
-#     photos = Image.todays_photos()
-#     return render(request,'all-photos/today-photos.html',{"date": date,"photos":photos})
+def photos_of_day(request):
+    date = dt.date.today()
+    photos = Image.todays_photos()
+    return render(request,'all-photos/today-photos.html',{"date": date,"photos":photos})
     
 # def past_days_photos(request, past_date):
 
