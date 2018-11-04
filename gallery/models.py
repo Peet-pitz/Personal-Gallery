@@ -48,11 +48,11 @@ class Image(models.Model):
     def __str__(self):
         return self.image_name
 
-#     @classmethod
-#     def todays_photos(cls):
-#         today = dt.date.today()
-#         photos = cls.objects.filter(pub_date__date = today)
-#         return photos
+    @classmethod
+    def todays_photos(cls):
+        today = dt.date.today()
+        photos = cls.objects.filter(pub_date__date = today)
+        return photos
 
 #     @classmethod
 #     def days_photos(cls,date):
