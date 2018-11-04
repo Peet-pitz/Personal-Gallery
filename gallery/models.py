@@ -54,10 +54,10 @@ class Image(models.Model):
         photos = cls.objects.filter(pub_date__date = today)
         return photos
 
-#     @classmethod
-#     def days_photos(cls,date):
-#         photos = cls.objects.filter(pub_date__date = date)
-#         return photos
+    @classmethod
+    def past_days_photos(cls,date):
+        photos = cls.objects.filter(pub_date__date = date)
+        return photos
 
 #     @classmethod
 #     def search_by_image_category(cls,search_term):
