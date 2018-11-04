@@ -14,11 +14,11 @@ class Photographer(models.Model):
     def save_editor(self):
         self.save()
 
-# class tags(models.Model):
-#     name = models.CharField(max_length = 30)
+class tags(models.Model):
+    name = models.CharField(max_length = 30)
 
-#     def __str__(self):
-#         return self.name
+    def __str__(self):
+        return self.name
 
     
 
