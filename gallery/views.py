@@ -29,18 +29,18 @@ def past_days_photos(request, past_date):
    photos = Image.days_photos(date)
    return render(request, 'all-photos/past-photos.html', {"date": date,"photos":photos})
 
-# def search_results(request):
+def search_results(request):
 
-#     if 'image' in request.GET and request.GET["image"]:
-#         search_term = request.GET.get("image")
-#         searched_images = Image.search_by_image_category(search_input)
-#         message = f"{search_input}"
+    if 'image' in request.GET and request.GET["image"]:
+        search_term = request.GET.get("image")
+        searched_images = Image.search_by_image_category(search_input)
+        message = f"{search_input}"
 
-#         return render(request, 'all-photos/search.html',{"message":message,"images": searched_images})
+        return render(request, 'all-photos/search.html',{"message":message,"images": searched_images})
 
-#     else:
-#         message = "You haven't searched for any term"
-#         return render(request, 'all-photos/search.html',{"message":message})
+    else:
+        message = "You haven't searched for any term"
+        return render(request, 'all-photos/search.html',{"message":message})
     
 
 # def image(request,image_id):
